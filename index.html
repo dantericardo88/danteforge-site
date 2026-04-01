@@ -323,6 +323,27 @@
         gap: 0.9rem;
       }
 
+      /* Kit form overrides */
+      .seva-form.formkit-form [data-element="fields"] {
+        display: contents;
+      }
+
+      .seva-form.formkit-form input[type="email"] {
+        width: 100%;
+        min-height: 3.4rem;
+        padding: 0 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 1rem;
+        font: inherit;
+        color: var(--text);
+        background: rgba(8, 10, 18, 0.7);
+      }
+
+      .seva-form.formkit-form input[type="email"]:focus {
+        outline: 2px solid rgba(255, 107, 53, 0.35);
+        outline-offset: 2px;
+      }
+
       label {
         font-size: 0.92rem;
         color: var(--muted);
@@ -608,24 +629,23 @@
                   <span>then $20/month, cancel anytime</span>
                 </div>
 
-                <form action="https://app.kit.com/forms/9275262/subscriptions" method="post" novalidate>
-                  <input type="hidden" name="source" value="github-pages-launch">
+                <form action="https://app.kit.com/forms/9275262/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9275262" data-uid="7079a58441" data-format="inline" data-version="5">
                   <label for="email-top">Work email</label>
-                  <input
-                    id="email-top"
-                    name="email"
-                    type="email"
-                    inputmode="email"
-                    autocomplete="email"
-                    placeholder="you@company.com"
-                    required
-                  >
-                  <button class="button button-primary" type="submit">Reserve my spot</button>
+                  <div data-element="fields">
+                    <input
+                      id="email-top"
+                      name="email_address"
+                      aria-label="Work email"
+                      type="email"
+                      placeholder="you@company.com"
+                      required
+                    >
+                    <button class="button button-primary" type="submit">Reserve my spot</button>
+                  </div>
                   <p class="privacy-note">
                     No spam. We only use your email for waitlist updates, launch access, and
                     onboarding notes.
                   </p>
-                  <p class="status-text" data-form-status></p>
                 </form>
               </div>
             </aside>
@@ -775,23 +795,22 @@
               </div>
 
               <div>
-                <form action="https://app.kit.com/forms/9275262/subscriptions" method="post" novalidate>
-                  <input type="hidden" name="source" value="github-pages-footer">
+                <form action="https://app.kit.com/forms/9275262/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9275262" data-uid="7079a58441" data-format="inline" data-version="5">
                   <label for="email-bottom">Join the waitlist</label>
-                  <input
-                    id="email-bottom"
-                    name="email"
-                    type="email"
-                    inputmode="email"
-                    autocomplete="email"
-                    placeholder="name@team.com"
-                    required
-                  >
-                  <button class="button button-primary" type="submit">Get launch access</button>
+                  <div data-element="fields">
+                    <input
+                      id="email-bottom"
+                      name="email_address"
+                      aria-label="Join the waitlist"
+                      type="email"
+                      placeholder="name@team.com"
+                      required
+                    >
+                    <button class="button button-primary" type="submit">Get launch access</button>
+                  </div>
                   <p class="privacy-note">
                     We will send launch updates, onboarding details, and pricing reminders. Nothing else.
                   </p>
-                  <p class="status-text" data-form-status></p>
                 </form>
               </div>
             </section>

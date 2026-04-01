@@ -824,24 +824,5 @@
       </div>
     </div>
 
-    <script>
-      const forms = document.querySelectorAll("form");
-
-      forms.forEach((form) => {
-        const button = form.querySelector("button");
-        const status = form.querySelector("[data-form-status]");
-
-        form.addEventListener("submit", () => {
-          if (button instanceof HTMLButtonElement) {
-            button.disabled = true;
-            button.textContent = "Sending...";
-          }
-
-          if (status) {
-            status.textContent = "Passing your email to the waitlist...";
-          }
-        });
-      });
-    </script>
   </body>
 </html>
